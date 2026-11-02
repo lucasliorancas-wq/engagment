@@ -25,7 +25,7 @@ line-height:1.8;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+linear-gradient(rgba(0,0,0,.40),rgba(0,0,0,.40)),
 url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 background-position:center;
@@ -37,7 +37,7 @@ padding:20px;
 }
 
 .hero-content{
-background:rgba(255,255,255,.12);
+background:rgba(255,255,255,.1);
 backdrop-filter:blur(8px);
 padding:40px;
 border-radius:24px;
@@ -47,32 +47,31 @@ color:white;
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:4.5rem;
-margin-bottom:15px;
+font-size:5rem;
+margin-bottom:10px;
 }
 
 .hero p{
 font-size:1.2rem;
-margin:6px 0;
+margin:8px 0;
 }
 
-.main-button,
-.rsvp-button{
+.main-button{
 display:inline-block;
+margin-top:30px;
+padding:20px 50px;
 background:#35613a;
 color:white;
-padding:20px 45px;
-border-radius:50px;
 text-decoration:none;
+border-radius:50px;
 font-weight:600;
+font-size:1.2rem;
 letter-spacing:1px;
-margin-top:25px;
 transition:.3s;
-box-shadow:0 10px 25px rgba(0,0,0,.2);
+box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
-.main-button:hover,
-.rsvp-button:hover{
+.main-button:hover{
 background:#28482b;
 transform:translateY(-2px);
 }
@@ -87,8 +86,8 @@ h2{
 font-family:'Playfair Display',serif;
 text-align:center;
 font-size:2.3rem;
-color:#35613a;
 margin-bottom:30px;
+color:#35613a;
 }
 
 .card,
@@ -106,22 +105,46 @@ font-weight:600;
 color:#35613a;
 }
 
-.map-container{
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-
 .highlight{
 font-weight:600;
 color:#35613a;
+}
+
+.rsvp-box{
+text-align:center;
+}
+
+.rsvp-button{
+display:inline-block;
+margin-top:20px;
+padding:25px 60px;
+background:#35613a;
+color:white;
+font-size:1.5rem;
+font-weight:700;
+text-decoration:none;
+border-radius:15px;
+letter-spacing:1px;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+transition:.3s;
+}
+
+.rsvp-button:hover{
+background:#28482b;
+transform:translateY(-2px);
+}
+
+.map-container{
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 footer{
 background:#35613a;
 color:white;
 text-align:center;
-padding:30px;
+padding:35px;
 margin-top:40px;
 }
 
@@ -135,14 +158,18 @@ font-size:3rem;
 padding:25px;
 }
 
+.hero p{
+font-size:1rem;
+}
+
 .countdown{
 font-size:1.4rem;
 }
 
 .main-button,
 .rsvp-button{
-display:block;
 width:100%;
+max-width:320px;
 }
 
 }
@@ -159,13 +186,11 @@ width:100%;
 <h1>Sian & Lucas</h1>
 
 <p>Engagement Celebration</p>
-
 <p>12th December 2026 • 7pm onwards</p>
-
 <p>The Freemasons Arms, Norwich</p>
 
 <a
-href="https://docs.google.com/forms/d/e/1FAIpQLSdVmn3PktkvHypT3fvCCC0xBhM-VLDIyfQQqPbmY0EOKDy\_2g/viewform?usp=header"
+href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAa2xCGxUQ1lHOUc0UFFMMVZCNEk3U0VEUkFKRTVLQy4u"
 target="_blank"
 class="main-button">
 
@@ -228,7 +253,7 @@ Whether they are friends or partners are very welcome, just let us know for numb
 
 <p>
 <span class="highlight">What to expect</span><br>
-This will just be a fun casual evening, dress how you'd like and expect a fun time with lots of laughs!
+This will just be a fun casual evening, dress how you'd like and expect a fun time with lots of laughs.
 </p>
 
 <br>
@@ -246,14 +271,14 @@ We'd also love it if you could bring a snack to share with everyone too, even if
 <br>
 
 <p>
-However, if you're working or too busy, there's no pressure, and you can order takeaways to the pub itself.
+However, if you're working or too busy, there's no pressure, and you can order takeaways directly to the pub.
 </p>
 
 <br>
 
 <p>
 <strong>
-We look forward to celebrating our engagement with you, and cannot wait to see you all!
+We look forward to celebrating our engagement with you and cannot wait to see you all!
 </strong>
 </p>
 
@@ -267,12 +292,12 @@ We look forward to celebrating our engagement with you, and cannot wait to see y
 
 <div class="rsvp-box">
 
-<p style="font-size:1.15rem;margin-bottom:20px;">
-Please let us know if you'll be joining us.
+<p style="font-size:1.15rem;">
+Please let us know whether you'll be joining us.
 </p>
 
 <a
-href="https://docs.google.com/forms/d/e/1FAIpQLSdVmn3PktkvHypT3fvCCC0xBhM-VLDIyfQQqPbmY0EOKDy\_2g/viewform?usp=header"
+href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAa2xCGxUQ1lHOUc0UFFMMVZCNEk3U0VEUkFKRTVLQy4u"
 target="_blank"
 class="rsvp-button">
 
@@ -327,7 +352,9 @@ const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
 const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
 
 document.getElementById("timer").innerHTML =
-days + " Days • " + hours + " Hours • " + minutes + " Minutes";
+days + " Days • " +
+hours + " Hours • " +
+minutes + " Minutes";
 
 },1000);
 
