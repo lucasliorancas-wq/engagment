@@ -1,23 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sian & Lucas | Engagement Party</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f8f2;
+color:#315131;
+line-height:1.8;
+}
+
+.hero{
+height:75vh;
+background:
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content{
+max-width:800px;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:4rem;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:1.2rem;
+margin:6px 0;
+}
+
+section{
+max-width:1000px;
+margin:auto;
+padding:70px 20px;
+}
+
+h2{
+font-family:'Playfair Display',serif;
+text-align:center;
+font-size:2.2rem;
+margin-bottom:30px;
+color:#35613a;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.countdown{
+text-align:center;
+font-size:2rem;
+font-weight:600;
+color:#35613a;
+}
+
+.map-container{
+overflow:hidden;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.form-container{
+background:white;
+padding:15px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+iframe{
+border:none;
+}
+
+footer{
+background:#35613a;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+.highlight{
+font-weight:600;
+color:#35613a;
+}
+
+@media (max-width:768px){
+
+.hero{
+height:65vh;
+}
+
+.hero h1{
+font-size:2.8rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.countdown{
+font-size:1.4rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<div class="hero-content">
+
+<h1>Sian & Lucas</h1>
+
+<p>💚 Engagement Celebration 💚</p>
+
+<p>Saturday 12th December 2026</p>
+
+<p>7pm onwards</p>
+
+<p>The Freemasons Arms, Norwich</p>
+
+</div>
+</section>
+
 <section>
-<h2>RSVP</h2>
+
+<h2>Countdown to the Celebration</h2>
+
+<div class="countdown" id="timer"></div>
+
+</section>
+
+<section>
+
+<h2>Event Details</h2>
 
 <div class="card">
 
-<p style="text-align:center; margin-bottom:20px;">
-Please complete the form below to let us know if you'll be joining us.
-Plus ones are very welcome, whether they're friends or partners.
+<p><strong>Hello you wonderful person!</strong></p>
+
+<br>
+
+<p>
+We are having an engagement party, and we'd love for you to come!
+Please respond to this invite so we have an idea of numbers, and read on for details.
 </p>
+
+<br>
+
+<p>
+<span class="highlight">Where?</span><br>
+The Freemasons Arms<br>
+27 Hall Rd<br>
+Norwich NR1 3HQ<br>
+United Kingdom
+</p>
+
+<br>
+
+<p>
+<span class="highlight">When?</span><br>
+12th December 2026<br>
+7pm onwards
+</p>
+
+<br>
+
+<p>
+<span class="highlight">Plus ones</span><br>
+Whether they are friends or partners are very welcome, just let us know for numbers.
+</p>
+
+<br>
+
+<p>
+<span class="highlight">What to expect</span><br>
+This will just be a fun casual evening, dress how you'd like and expect a fun time with lots of laughs!
+</p>
+
+<br>
+
+<p>
+Even if you don't fancy drinking, the pub will have plenty of soft drinks to choose from and we will be providing a few picky bits for people to snack on.
+</p>
+
+<br>
+
+<p>
+We'd also love it if you could bring a snack to share with everyone too, even if it's just a few crisps or sausage rolls. If you do make something please label its ingredients so we can cater to everyone.
+</p>
+
+<br>
+
+<p>
+However, if you're working or too busy, there's no pressure, and you can order takeaways to the pub itself.
+</p>
+
+<br>
+
+<p>
+<strong>
+We look forward to celebrating our engagement with you, and cannot wait to see you all!
+</strong>
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>RSVP</h2>
+
+<div class="form-container">
 
 <iframe
 src="https://docs.google.com/forms/d/e/1FAIpQLSdVmn3PktkvHypT3fvCCC0xBhM-VLDIyfQQqPbmY0EOKDy\_2g/viewform?embedded=true"
 width="100%"
 height="850"
-frameborder="0"
 marginheight="0"
-marginwidth="0"
-style="border:none;">
+marginwidth="0">
 Loading…
 </iframe>
 
 </div>
+
 </section>
+
+<section>
+
+<h2>Location</h2>
+
+<div class="map-container">
+
+<iframe
+src="https://www.google.com/maps?q=The+Freemasons+Arms+27+Hall+Road+Norwich+NR1+3HQ&output=embed"
+width="100%"
+height="450"
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+<footer>
+
+❤️ Sian & Lucas ❤️
+
+<br><br>
+
+12th December 2026 • The Freemasons Arms, Norwich
+
+</footer>
+
+<script>
+
+const eventDate = new Date("December 12, 2026 19:00:00").getTime();
+
+setInterval(function(){
+
+const now = new Date().getTime();
+const distance = eventDate - now;
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+document.getElementById("timer").innerHTML =
+days + " Days • " + hours + " Hours • " + minutes + " Minutes";
+
+},1000);
+
+</script>
+
+</body>
+</html>
