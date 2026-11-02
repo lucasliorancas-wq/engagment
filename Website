@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sian & Lucas | Engagement Party</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f8f2;
+color:#2f4f2f;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(34,58,34,.92);
+padding:15px;
+text-align:center;
+z-index:999;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:500;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),
+url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+font-family:'Playfair Display',serif;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-top:10px;
+}
+
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+font-family:'Playfair Display',serif;
+text-align:center;
+margin-bottom:30px;
+color:#35613a;
+}
+
+.countdown{
+font-size:2rem;
+text-align:center;
+font-weight:bold;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+form{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+input,select,textarea{
+width:100%;
+padding:12px;
+margin:10px 0 20px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+background:#35613a;
+color:white;
+padding:15px;
+width:100%;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+footer{
+background:#35613a;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+#plusOneField{
+display:none;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#story">Our Story</a>
+<a href="#countdown">Countdown</a>
+<a href="#gallery">Gallery</a>
+<a href="#rsvp">RSVP</a>
+<a href="#location">Location</a>
+</nav>
+
+<section class="hero">
+<div>
+<h1>Sian & Lucas</h1>
+<p>We're Engaged 💚</p>
+<p>Join us as we celebrate our next adventure together</p>
+</div>
+</section>
+
+<section id="story">
+<h2>Our Story</h2>
+<div class="card">
+<p>
+Every great adventure starts with a single moment.
+We are excited to celebrate our engagement surrounded by the people we love most.
+Thank you for being part of our journey.
+</p>
+</div>
+</section>
+
+<section id="countdown">
+<h2>Countdown to the Celebration</h2>
+<div class="countdown" id="timer"></div>
+</section>
+
+<section id="gallery">
+<h2>Gallery</h2>
+<div class="gallery">
+<img src="https://picsum.photos/500/500?1">
+<img src="https://picsum.photos/500/500?2">
+<img src="https://picsum.photos/500/500?3">
+<img src="https://picsum.photos/500/500?4">
+</div>
+</section>
+
+<section id="rsvp">
+<h2>RSVP</h2>
+
+<form>
+<label>Your Name</label>
+<input type="text" required>
+
+<label>Email</label>
+<input type="email" required>
+
+<label>Will you attend?</label>
+<select>
+<option>Yes, I'll be there!</option>
+<option>Sorry, I can't make it</option>
+</select>
+
+<label>Bringing a Plus One?</label>
+<select id="plusOne" onchange="togglePlusOne()">
+<option>No</option>
+<option>Yes</option>
+</select>
+
+<div id="plusOneField">
+<label>Plus One Name</label>
+<input type="text">
+</div>
+
+<label>Dietary Requirements</label>
+<textarea rows="3"></textarea>
+
+<button type="submit">Send RSVP</button>
+</form>
+</section>
+
+<section id="location">
+<h2>Location</h2>
+
+<iframe
+src="https://www.google.com/maps?q=Ipswich,+UK&output=embed"
+width="100%"
+height="450"
+style="border:0;border-radius:15px;"
+loading="lazy">
+</iframe>
+
+</section>
+
+<footer>
+❤️ Sian & Lucas ❤️
+</footer>
+
+<script>
+function togglePlusOne(){
+const select = document.getElementById('plusOne');
+const field = document.getElementById('plusOneField');
+
+field.style.display =
+select.value === 'Yes' ? 'block' : 'none';
+}
+
+const eventDate = new Date("June 15, 2027 16:00:00").getTime();
+
+setInterval(function(){
+
+const now = new Date().getTime();
+const distance = eventDate - now;
+
+const days = Math.floor(distance/(1000*60*60*24));
+const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+const mins = Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("timer").innerHTML =
+days + " Days " + hours + " Hours " + mins + " Minutes";
+
+},1000);
+</script>
+
+</body>
+</html>
