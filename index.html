@@ -15,10 +15,6 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
 font-family:'Poppins',sans-serif;
 background:#f5f8f2;
@@ -29,77 +25,78 @@ line-height:1.8;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url('IMG_2599.jpg');
+linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-color:white;
 padding:20px;
 }
 
 .hero-content{
-max-width:800px;
-background:rgba(0,0,0,.25);
-backdrop-filter:blur(6px);
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(8px);
 padding:40px;
-border-radius:25px;
+border-radius:24px;
+max-width:700px;
+color:white;
 }
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:5rem;
-margin-bottom:10px;
+font-size:4.5rem;
+margin-bottom:15px;
 }
 
 .hero p{
-font-size:1.3rem;
+font-size:1.2rem;
 margin:6px 0;
 }
 
-.main-button{
+.main-button,
+.rsvp-button{
 display:inline-block;
-margin-top:30px;
-padding:20px 50px;
 background:#35613a;
 color:white;
-text-decoration:none;
+padding:20px 45px;
 border-radius:50px;
-font-size:1.3rem;
+text-decoration:none;
 font-weight:600;
 letter-spacing:1px;
-text-transform:uppercase;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
+margin-top:25px;
 transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
-.main-button:hover{
+.main-button:hover,
+.rsvp-button:hover{
 background:#28482b;
 transform:translateY(-2px);
 }
 
 section{
-max-width:1100px;
+max-width:1000px;
 margin:auto;
 padding:80px 20px;
 }
 
 h2{
 font-family:'Playfair Display',serif;
-font-size:2.4rem;
 text-align:center;
+font-size:2.3rem;
 color:#35613a;
-margin-bottom:35px;
+margin-bottom:30px;
 }
 
-.card{
+.card,
+.rsvp-box{
 background:white;
 padding:40px;
 border-radius:20px;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
+box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .countdown{
@@ -109,18 +106,10 @@ font-weight:600;
 color:#35613a;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
-}
-
-.gallery img{
-width:100%;
-height:500px;
-object-fit:cover;
+.map-container{
 border-radius:20px;
-box-shadow:0 8px 20px rgba(0,0,0,.15);
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .highlight{
@@ -128,48 +117,15 @@ font-weight:600;
 color:#35613a;
 }
 
-.rsvp-box{
-background:white;
-padding:50px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-
-.rsvp-button{
-display:inline-block;
-padding:25px 60px;
-background:#35613a;
-color:white;
-font-size:1.5rem;
-font-weight:700;
-text-decoration:none;
-border-radius:15px;
-letter-spacing:1px;
-text-transform:uppercase;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-transition:.3s;
-}
-
-.rsvp-button:hover{
-background:#28482b;
-transform:translateY(-2px);
-}
-
-.map-container{
-overflow:hidden;
-border-radius:20px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-
 footer{
 background:#35613a;
 color:white;
 text-align:center;
-padding:35px;
+padding:30px;
+margin-top:40px;
 }
 
-@media (max-width:768px){
+@media(max-width:768px){
 
 .hero h1{
 font-size:3rem;
@@ -179,24 +135,14 @@ font-size:3rem;
 padding:25px;
 }
 
-.hero p{
-font-size:1rem;
-}
-
-.gallery img{
-height:350px;
-}
-
 .countdown{
 font-size:1.4rem;
 }
 
 .main-button,
 .rsvp-button{
-font-size:1.1rem;
-padding:18px 25px;
+display:block;
 width:100%;
-max-width:320px;
 }
 
 }
@@ -236,20 +182,6 @@ RSVP NOW
 <h2>Countdown to the Celebration</h2>
 
 <div class="countdown" id="timer"></div>
-
-</section>
-
-<section>
-
-<h2>Our Adventure So Far</h2>
-
-<div class="gallery">
-
-<img src="IMG_2599.jpg" alt="Engagement Photo">
-
-<img src="IMG20230809163838_Original.jpg" alt="Couple Photo">
-
-</div>
 
 </section>
 
@@ -335,8 +267,8 @@ We look forward to celebrating our engagement with you, and cannot wait to see y
 
 <div class="rsvp-box">
 
-<p style="font-size:1.2rem;margin-bottom:30px;">
-Please click below to let us know if you'll be joining us.
+<p style="font-size:1.15rem;margin-bottom:20px;">
+Please let us know if you'll be joining us.
 </p>
 
 <a
@@ -373,7 +305,7 @@ loading="lazy">
 
 <footer>
 
-❤️ Sian & Lucas ❤️
+Sian & Lucas
 
 <br><br>
 
@@ -390,9 +322,9 @@ setInterval(function(){
 const now = new Date().getTime();
 const distance = eventDate - now;
 
-const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const days = Math.floor(distance / (1000*60*60*24));
+const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
 
 document.getElementById("timer").innerHTML =
 days + " Days • " + hours + " Hours • " + minutes + " Minutes";
