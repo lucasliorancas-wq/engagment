@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Sian & Lucas | Engagement Party</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -16,10 +15,14 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Poppins',sans-serif;
-background:#f4f8f2;
-color:#315131;
+background:#f5f8f2;
+color:#2f4f2f;
 line-height:1.8;
 }
 
@@ -34,40 +37,46 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
 color:white;
+padding:20px;
 }
 
 .hero-content{
 max-width:800px;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(6px);
+padding:40px;
+border-radius:25px;
 }
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:4.5rem;
+font-size:5rem;
 margin-bottom:10px;
 }
 
 .hero p{
-font-size:1.25rem;
-margin:8px 0;
+font-size:1.3rem;
+margin:6px 0;
 }
 
-.rsvp-button{
+.main-button{
 display:inline-block;
 margin-top:30px;
+padding:20px 50px;
 background:#35613a;
 color:white;
 text-decoration:none;
-padding:22px 45px;
-font-size:1.5rem;
-font-weight:700;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,.25);
+border-radius:50px;
+font-size:1.3rem;
+font-weight:600;
+letter-spacing:1px;
+text-transform:uppercase;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
 transition:.3s;
 }
 
-.rsvp-button:hover{
+.main-button:hover{
 background:#28482b;
 transform:translateY(-2px);
 }
@@ -75,22 +84,22 @@ transform:translateY(-2px);
 section{
 max-width:1100px;
 margin:auto;
-padding:70px 20px;
+padding:80px 20px;
 }
 
 h2{
 font-family:'Playfair Display',serif;
-text-align:center;
 font-size:2.4rem;
-margin-bottom:30px;
+text-align:center;
 color:#35613a;
+margin-bottom:35px;
 }
 
 .card{
 background:white;
-padding:35px;
-border-radius:18px;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
+padding:40px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
 }
 
 .countdown{
@@ -119,21 +128,38 @@ font-weight:600;
 color:#35613a;
 }
 
-.rsvp-section{
-text-align:center;
-}
-
-.rsvp-card{
+.rsvp-box{
 background:white;
 padding:50px;
-border-radius:18px;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
+border-radius:20px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.rsvp-button{
+display:inline-block;
+padding:25px 60px;
+background:#35613a;
+color:white;
+font-size:1.5rem;
+font-weight:700;
+text-decoration:none;
+border-radius:15px;
+letter-spacing:1px;
+text-transform:uppercase;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+transition:.3s;
+}
+
+.rsvp-button:hover{
+background:#28482b;
+transform:translateY(-2px);
 }
 
 .map-container{
 overflow:hidden;
-border-radius:18px;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 footer{
@@ -141,34 +167,36 @@ background:#35613a;
 color:white;
 text-align:center;
 padding:35px;
-margin-top:50px;
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 .hero h1{
 font-size:3rem;
 }
 
-.hero{
-height:85vh;
+.hero-content{
+padding:25px;
 }
 
 .hero p{
 font-size:1rem;
 }
 
-.countdown{
-font-size:1.4rem;
-}
-
 .gallery img{
 height:350px;
 }
 
+.countdown{
+font-size:1.4rem;
+}
+
+.main-button,
 .rsvp-button{
-font-size:1.2rem;
-padding:18px 30px;
+font-size:1.1rem;
+padding:18px 25px;
+width:100%;
+max-width:320px;
 }
 
 }
@@ -184,20 +212,18 @@ padding:18px 30px;
 
 <h1>Sian & Lucas</h1>
 
-<p>💚 Engagement Celebration 💚</p>
+<p>Engagement Celebration</p>
 
-<p>Saturday 12th December 2026</p>
-
-<p>7pm onwards</p>
+<p>12th December 2026 • 7pm onwards</p>
 
 <p>The Freemasons Arms, Norwich</p>
 
 <a
-href="https://docs.google.com/forms/d/e/1FAIpQLSdVmn3PktkvHypT3fvCCC0xBhM-VLDIyfQQqPbmY0EOKDy\_2g/viewform?usp=sf\_link"
+href="https://docs.google.com/forms/d/e/1FAIpQLSdVmn3PktkvHypT3fvCCC0xBhM-VLDIyfQQqPbmY0EOKDy\_2g/viewform?usp=header"
 target="_blank"
-class="rsvp-button">
+class="main-button">
 
-✅ RSVP HERE ✅
+RSVP NOW
 
 </a>
 
@@ -219,9 +245,9 @@ class="rsvp-button">
 
 <div class="gallery">
 
-<img src="IMG_2599.jpg" alt="Engagement">
+<img src="IMG_2599.jpg" alt="Engagement Photo">
 
-<img src="IMG20230809163838_Original.jpg" alt="Photo of the couple">
+<img src="IMG20230809163838_Original.jpg" alt="Couple Photo">
 
 </div>
 
@@ -303,24 +329,22 @@ We look forward to celebrating our engagement with you, and cannot wait to see y
 
 </section>
 
-<section class="rsvp-section">
+<section>
 
 <h2>RSVP</h2>
 
-<div class="rsvp-card">
+<div class="rsvp-box">
 
-<p>
-Please let us know if you'll be joining us.
+<p style="font-size:1.2rem;margin-bottom:30px;">
+Please click below to let us know if you'll be joining us.
 </p>
 
-<br>
-
 <a
-href="https://docs.google.com/forms/d/e/1FAIpQLSdVmn3PktkvHypT3fvCCC0xBhM-VLDIyfQQqPbmY0EOKDy\_2g/viewform?usp=sf\_link"
+href="https://docs.google.com/forms/d/e/1FAIpQLSdVmn3PktkvHypT3fvCCC0xBhM-VLDIyfQQqPbmY0EOKDy\_2g/viewform?usp=header"
 target="_blank"
 class="rsvp-button">
 
-✅ COMPLETE RSVP ✅
+COMPLETE RSVP
 
 </a>
 
@@ -359,27 +383,19 @@ loading="lazy">
 
 <script>
 
-const eventDate =
-new Date("December 12, 2026 19:00:00").getTime();
+const eventDate = new Date("December 12, 2026 19:00:00").getTime();
 
 setInterval(function(){
 
 const now = new Date().getTime();
 const distance = eventDate - now;
 
-const days =
-Math.floor(distance/(1000*60*60*24));
-
-const hours =
-Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-
-const minutes =
-Math.floor((distance%(1000*60*60))/(1000*60));
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
 document.getElementById("timer").innerHTML =
-days + " Days • " +
-hours + " Hours • " +
-minutes + " Minutes";
+days + " Days • " + hours + " Hours • " + minutes + " Minutes";
 
 },1000);
 
